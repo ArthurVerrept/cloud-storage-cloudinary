@@ -45,6 +45,7 @@ app.get('/', (req, res) => {
 });
 
 app.post('/upload', parser.any(), (req, res) => {
+  console.log(req);
     const fit = { Hats } = req.body;
     const newOutfit = new Outfit({
     userID: 'testID',
